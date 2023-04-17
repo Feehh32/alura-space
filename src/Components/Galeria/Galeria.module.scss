@@ -1,0 +1,70 @@
+@import '../../styles/variaveis';
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    justify-content: flex-start;
+    width: 65vw;
+
+    h2 {
+        font-size: 2rem;
+        font-family: $fonte-normal;
+        color: $roxo;
+        font-weight: 400;
+    }
+
+    &__lista {
+        padding: 0;
+        margin-top: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        gap: 24px;
+
+        li {
+            width: 260px;
+            background-color: $azul-escuro;
+            border-radius: 8px;
+            box-shadow: 0 5px 6px rgba($color: #021a3a, $alpha: 0.7);
+            transition: all .3s ease-in-out;
+
+            .galeria__imagem {
+                width: 100%;
+
+            }
+
+            .galeria__descricao {
+                margin: 10px 0 5px 10px;
+                font-family: $fonte-bold;
+                color: $cor-do-texto;
+                line-height: 16px;
+                font-size: 1.25rem;
+            }
+
+            div {
+                height: 32px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 10px 5px 10px;
+
+                p {
+                    font-family: $fonte-normal;
+                    color: $cor-do-texto;
+                    line-height: 16px;
+                }
+
+                span {
+                    display: flex;
+                    gap: 16px;
+                }
+            }
+        }
+
+        li:hover {
+            cursor: pointer;
+            transform: scale(1.1)
+        }
+    }
+}
